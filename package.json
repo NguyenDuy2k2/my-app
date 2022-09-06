@@ -3,24 +3,45 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@headlessui/react": "^1.6.6",
+    "@heroicons/react": "^1.0.6",
+    "@reduxjs/toolkit": "^1.8.5",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^13.5.0",
+    "@testing-library/user-event": "^14.4.3",
     "@types/jest": "^27.5.2",
-    "@types/node": "^16.11.56",
-    "@types/react": "^18.0.18",
+    "@types/node": "^17.0.45",
+    "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
+    "axios": "^0.27.2",
+    "chart.js": "^3.9.1",
+    "clsx": "^1.2.1",
+    "faker": "5.5.3",
+    "json-server": "^0.17.0",
+    "json-server-auth": "^2.1.0",
     "react": "^18.2.0",
+    "react-chartjs-2": "^4.3.1",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.34.2",
+    "react-redux": "^8.0.2",
+    "react-router": "^6.3.0",
+    "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
-    "typescript": "^4.8.2",
+    "recharts": "^2.1.13",
+    "redux-saga": "^1.2.1",
+    "tw-elements": "^1.0.0-alpha12",
+    "typescript": "^4.7.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "build:tailwind": "tailwindcss build src/index.css ",
+    "prestart": "npm run build:tailwind",
+    "prebuild": "npm run build:tailwind",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "json-server-auth --watch db.json --port 3001"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +60,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.8",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8"
   }
 }
